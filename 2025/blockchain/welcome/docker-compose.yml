@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  welcome:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    environment:
+      - FLAG=${FLAG:-flag{default_welcome_flag}}
+      - APTOS_NETWORK=${APTOS_NETWORK:-devnet}
+      - APTOS_NODE_URL=${APTOS_NODE_URL:-}
+    restart: unless-stopped

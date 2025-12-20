@@ -1,0 +1,117 @@
+/*
+ * This stylesheet contain the style of the main window
+*/
+
+* {
+    box-sizing: border-box;
+    border-width: 0;
+    border-style: solid;
+    font-family: monospace;
+}
+
+body{    
+    width:  100vw; 
+    height: 100vh;
+    display: flex;
+
+    margin: 0px;
+}
+
+h1::before{
+    content: '';
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url('../svg/eye.svg');
+    background-size: cover;
+    background-position: left;
+    margin-right: 16px;
+    vertical-align: middle;
+}
+
+#accountBar{
+    background-color: #fafafa;
+    border: 1px solid #e2e8f0;    
+    width: 200px;
+    height:100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+#accountBar>*{
+    margin: 3px;
+}
+
+#toolBar{
+    margin-top: 16px;
+    margin-bottom: 16px;
+    align-items: flex-start;
+}#toolBar[right]{align-items: flex-end;}
+
+#location-placeholder{
+    width: 200px;
+    height: 32px;
+    line-height: 450%;
+    padding-left: 10px;
+    font-size: .9rem;
+    color: #919191;
+}
+
+button{
+    background-color: var(--main-foreground);
+    border-radius: 10px;
+    padding: 3px;
+    /* #1C274C -- blu scuro */
+}
+
+button:disabled{
+    border-color: rgba(255, 0, 0, 0.298);
+}
+
+#window{
+    border-bottom-left-radius: var(--window-radius);
+    background-color: #ffffff;
+    padding: 2em;
+}
+
+#help{
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: 0px;
+    bottom: 0px;
+
+    margin: 10px;
+    padding: 3px;
+    background-color: #dbdbdb;
+    border-radius: 10px;
+
+    z-index: 1;
+    font-style: italic;
+    border-bottom: 1px solid black;
+}
+
+#help::before{
+    content: '';
+    display: inline-block;
+
+    width: 20px;
+    height: 20px;
+    background-size: cover;
+
+    background-image: url('../svg/user-manual-svgrepo-com.svg');
+    rotate: 4deg;
+    padding: 3px;
+}
+
+#help-manual{
+    height: 80vh;
+    width: 70vw;
+    padding: 25px;
+    box-shadow: 0px 0px 10px gray;
+    border-radius: 10px;
+}
+#help-manual iframe{
+    width: 80vw;
+}

@@ -1,0 +1,23 @@
+services:
+  apache-php:
+    build: ./apache-php
+    container_name: xampp-apache
+    ports:
+      - "9030:80"
+    volumes:
+      - ./apache-php/htdocs:/var/www/html
+    depends_on:
+      - mariadb
+
+  mariadb:
+    build: ./mariadb
+    container_name: xampp-mariadb
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: ctfuser
+      FLAG: $FLAG
+    volumes:
+      - mariadb_data:/var/lib/mysql
+
+volumes:
+  mariadb_data:

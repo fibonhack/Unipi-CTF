@@ -1,0 +1,7 @@
+services:
+  vibe-crypto:
+    container_name: vibe-crypto
+    build: .
+    ports:
+      - 11001:5555
+    privileged: true

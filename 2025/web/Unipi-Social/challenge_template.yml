@@ -1,0 +1,18 @@
+name: Unipi-Social
+title: Unipi-Social
+authors:
+  - Waaaaaanm
+  
+description: |
+  Abbiamo appena lanciato il nostro nuovo social network esclusivo per l'università!
+  Per ora è un po' vuoto, ma l'Admin ha già scritto un post interessante... peccato sia privato.
+
+  [Vai al sito](http://{{ host }}:{{ port }})
+
+topics:
+  - web
+
+files: []
+
+flags:
+  - unipi{j4v4scr1pt_c00ki3_inj3cti0n}

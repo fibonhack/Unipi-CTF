@@ -1,0 +1,135 @@
+#desktop{
+    display: flex;
+    flex-wrap: wrap;
+    height: min-content;
+}
+
+.selected {
+    border-radius: 10px;
+    border: 1px dashed #c7c7c7;
+    padding: 2px;    
+}
+
+.f input, .d input{
+    width: 50px;
+    border : none;
+    white-space: initial;
+}
+
+.f, .d{
+    display: grid;
+    grid-template-columns: min-content;
+    text-align: center;
+
+    width: min-content;
+    height:max-content;
+
+    border-radius: 10px;
+
+    padding: 8px;
+    margin: 3px;
+
+    font-weight: bold;
+    color: #7c5f5f;
+
+    justify-items: center;
+}
+
+.f:hover, .d:hover, button:hover{
+    border-radius: 5px;
+    --color: #e8e8e97d;
+    /* #c7c7c7; */
+    background-color: var(--color);
+    /* background-color: rgba(173, 216, 230, 0.568); */
+}
+
+.f::before {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 50px;
+
+    background-image: url('../svg/file_final.svg');
+    background-size: cover;
+    background-position: center;
+}
+
+.d::before {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-image: url('../svg/folder_final.svg');
+    background-size: cover;
+    background-position: center;
+}
+
+.d input, .f input {
+    width: auto;
+}
+
+#pwd{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    font-size: 14px;
+
+    border: 1px solid #e2e8f0;
+    border-radius: 5px;
+    background-color: #fafafa;
+
+    padding: 5px;
+    width: 82vw;
+}
+
+#pwd > *{
+    margin: 5px;
+    margin-left: 0px;
+    font-weight: 300;
+    /* color: #8f8f8f; */
+
+    width: min-content;
+    display: flex;
+}
+
+#pwd::before{
+    content: '';
+    display: inline-block;
+    width:  20px;
+    height: 20px;
+    background-image: url('../svg/home-svgrepo-com.svg');
+    background-size: cover;
+    background-position: left;
+    margin-right: 10px;
+    margin-left: 5px;
+    vertical-align: middle;
+}
+
+#pwd > *:hover{
+    text-decoration: underline;
+}
+
+#pwd:first-child {
+    margin-left:10px;
+}
+
+#pwd > div:not(:last-child)::after {
+    content: '>';
+    margin-left: 5px;
+    color: #8f8f8f;
+}
+
+#refresh{
+    content: '';
+    display: inline-block;
+    width:  20px;
+    height: 20px;
+    background-image: url('../svg/sync-svgrepo-com.svg');
+    background-size: cover;
+    background-position: left;
+    margin-right: 16px;
+    vertical-align: middle;
+
+    position:fixed;
+    right: 0px;
+}

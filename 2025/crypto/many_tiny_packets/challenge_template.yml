@@ -1,0 +1,25 @@
+name: Many Tiny Packets
+author: lorenzcat
+
+
+description: |
+  This challenge may or may not be about sending many tiny packets. Spoiler: it isn't, but we could not come up with a better name.
+
+
+# port: 11001
+# host: 'challs.{{ CTFD_URL }}'
+# connection_info: 'nc {{ host }} {{ port }}'
+
+# healthcheck: 'src/healthcheck.py {{ host }} {{ port }}'
+
+
+topics:
+- crypto
+
+files:
+- attachments/chall.py
+- attachments/flag_enc.txt
+
+flags:
+  - unipi{Many_Tiny_Packets...but_are_those_physically_packets?_Not_sure_btw_did_you_know_that_one_time_pad_is_not_really_secure_if_you_reuse_key_material!}
+

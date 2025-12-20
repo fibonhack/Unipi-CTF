@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Nell'HTML validator dice di non metterlo insieme ad un http-equiv,
+     ma l'http-equiv viene aggiunto solo se viene salvata la pagina corrente con control-s -->
+    <meta charset="UTF-8">
+    <title>Sogeking's Bag</title>
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+
+    <!-- importo lo stile-->
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/popup.css">
+    <link rel="stylesheet" href="./css/fileManager.css">
+    <link rel="stylesheet" href="./css/loginManager.css">
+    <link rel="stylesheet" href="./css/DropDownMenu.css">
+
+    <!-- gestisco la finestra -->
+    <script type="module">
+        import { Gui } from './js/framework/gui.js';
+        import { requests } from './js/framework/requests.js';
+
+        import { LoginManager } from './js/loginManager.js';
+        import { FileManager } from './js/fileManager.js';
+
+        "use strict";
+
+        function start(){
+            let loginManager = new LoginManager(requests);
+            let fileManager = new FileManager(requests);
+
+            // draw the toolbar
+            Gui.accountBar.appendChild(loginManager.logoutBtn);
+            Gui.accountBar.appendChild(loginManager.deleteBtn);
+            Gui.pwd.appendChild(fileManager.syncBtn);
+
+            // add login listners
+            loginManager.addEventListener("onlogin", fileManager.syncPwd.bind(fileManager));
+            loginManager.addEventListener("onlogin", fileManager.syncArchive.bind(fileManager));
+
+            loginManager.addEventListener("onlogout",fileManager.destroy.bind(fileManager));
+
+            loginManager.isLogged();
+            // show an advice if a file was already opened
+
+            Gui.helpDiv.addEventListener("click", () => {
+                const iframe = document.createElement("iframe");
+                iframe.src = "html/help.html";
+                iframe.id = "help-manual";
+
+                // Change help tag text
+                if (Gui.helpDiv.textContent === "Man Page!")
+                    Gui.helpDiv.textContent = "Go Back!";
+                else
+                    Gui.helpDiv.textContent = "Man Page!";
+
+                Gui.popup.toggleDialog([iframe]);
+            });
+        }
+
+        document.addEventListener("DOMContentLoaded", start);
+    </script>
+</head>
+<body>
+    <div id="accountBar">
+        <span id="location-placeholder">Account</span>
+    </div>
+    <div id="window">
+        <h1>Sogeking's bag</h1>
+    </div>
+    <div id="help">Man Page!</div>
+</body>
+</html>

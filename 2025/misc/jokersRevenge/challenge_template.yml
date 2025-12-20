@@ -1,0 +1,13 @@
+name: Joker's Revenge
+author: marcop
+
+description: The Joker did it again! He sneaked back into the bank and plugged the same weird USB device into one of the computers. He also left a note that reads "You will not find my flag this time! I have encrypted it and without the decryption key not even your Batcomputer can help you!". Can you find out what the Joker did on the computer from the USB traffic capture and retrieve the flag?
+
+topics:
+- misc
+
+files:
+- jokersRevenge.zip
+
+flags:
+  - unipi{d0n't_l34v3_y0ur_k3y5_1n_pl41n_51gh7}

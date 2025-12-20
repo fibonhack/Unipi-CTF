@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Unipi-Social</title>
+    <style>
+      
+        body { font-family: sans-serif; margin: 2em; background: #f4f4f4; }
+        h1 { color: #004488; }
+        #main-container { display: flex; gap: 2em; }
+        #posts-section { flex-grow: 1; }
+        #auth-section { width: 300px; background: white; padding: 1em; border-radius: 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); height: fit-content; }
+        #auth-section h3 { margin-top: 0; }
+        #auth-section input { width: 95%; padding: 8px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 3px; }
+        #auth-section button { width: 100%; padding: 10px; background: #004488; color: white; border: none; border-radius: 3px; cursor: pointer; }
+        #auth-section button:hover { background: #003366; }
+        #logout-link { display: none; }
+        #auth-message { font-size: 0.9em; color: green; }
+        .post { background: white; border: 1px solid #ccc; padding: 1em; border-radius: 5px; margin-bottom: 1em; }
+        .post h3 { margin: 0 0 0.5em 0; }
+        .post.admin { background: #fff8e1; border-color: #ffc107; }
+      
+        #create-post-form { background: white; padding: 1em; border-radius: 5px; margin-bottom: 1.5em; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+        #create-post-form h3 { margin-top: 0; }
+        #create-post-form textarea { width: 98%; padding: 8px; border: 1px solid #ccc; border-radius: 3px; }
+        #create-post-form button { background: #004488; color: white; padding: 8px 15px; border: none; border-radius: 3px; margin-top: 5px; cursor: pointer; }
+    </style>
+</head>
+<body>
+
+    <h1>Benvenuto su Unipi-Social</h1>
+    <a href="/api/logout" id="logout-link">Fai il Logout</a>
+
+    <div id="main-container">
+        
+        <div id="posts-section">
+
+            <div id="create-post-form" style="display: none;">
+                <h3>Scrivi un post</h3>
+                <textarea id="post-text" rows="4" placeholder="Cosa stai pensando?"></textarea>
+                <button id="submit-post-btn">Invia</button>
+                <p id="post-message" style="font-size: 0.9em;"></p>
+            </div>
+
+            <div id="posts-container">
+                <p>Caricamento post...</p>
+            </div>
+        </div>
+
+        <div id="auth-section">
+            <h3>Registrati o Accedi</h3>
+            <input type="text" id="auth-user" placeholder="Username">
+            <input type="password" id="auth-pass" placeholder="Password">
+            <button id="login-btn">Login</button>
+            <button id="register-btn" style="background: #555; margin-top: 5px;">Register</button>
+            <p id="auth-message"></p>
+        </div>
+
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

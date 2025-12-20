@@ -1,0 +1,10 @@
+version: '3.4'
+
+services:
+  pwn_agechecker:
+    container_name: pwn_agechecker
+    build:
+      context: .
+    ports:
+    - "10013:5000/tcp"
+    privileged: true

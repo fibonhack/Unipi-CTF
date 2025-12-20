@@ -1,0 +1,167 @@
+/*
+    TODO: fare un animazione per il popup
+*/
+
+/*
+    FIXME: studiare che diavolo sia :root e le cose con i due punti
+*/
+:root {
+    --grid-gap: 10px;
+}
+
+#delete-account{
+    background-color: #FF000035;
+    color: white;
+    font-style: italic;
+}
+
+#exit {
+    background-color: #dbdbdb;
+    padding: 7px;
+    margin: 7px;
+    margin-right: 25px;
+}
+
+#confirm {
+    background-color: #FF000035;
+    padding: 7px;
+    margin: 7px;
+    margin-left: 25px;
+}
+
+#log-out::before{
+    content: '';
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background-image: url('../svg/logout-svgrepo-com.svg');
+    background-size: cover;
+    background-position: left;
+    margin-right: 16px;
+    vertical-align: middle;
+}
+
+
+#popup{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    border-radius: var(--window-radius);
+    background-color: var(--main-background);
+    
+    /* box-shadow: 0px 0px 15px var(--main-foreground); */
+}
+
+#popup .nav {
+    grid-column: span 2;
+    border-bottom: 1px solid black;
+    width: fit-content;
+
+    position: relative;
+    top: 35px;
+
+    margin: 0 auto; /* Centers the .nav class horizontally */
+}
+
+#popup #login-form {
+    display: grid;
+
+    width: fit-content;
+    height: fit-content;
+
+    grid-template-columns: auto auto 10px;
+    grid-gap: var(--grid-gap);
+
+    padding: 25px;
+    box-shadow: 0px 0px 10px gray;
+    border-radius: 10px;
+}
+
+#login-form #username{
+    grid-column: span 2;
+}
+
+#login-form #confirm-container{
+    grid-column: span 3;
+    display: grid;
+    grid-template-columns: auto auto 10px;
+    grid-gap: var(--grid-gap);
+    width: 57px;
+}
+
+#login-form [id^="show-"]::before {
+    display: block;
+    content: '';
+
+    width: 25px; 
+    height: 25px; 
+    
+    background-image: url('../svg/eye.svg');
+    background-size: cover;
+    background-position: center;
+    margin: 0 auto;
+}
+
+#login-form [id^="show-"][show]::before {
+    display: block;
+    content: '';
+
+    width: 25px; 
+    height: 25px; 
+
+    background-image: url('../svg/closed_eye.svg');
+    background-size: cover;
+    background-position: center;
+    margin: 0 auto;
+}
+
+#show-password, #show-confirm-password{
+    position:relative;
+    left:-4px;
+}
+
+#login-form [id^="show-"] {
+    border: none;
+    background-color: transparent;
+
+    position: relative;
+    top: -3px;
+
+    width: max-content;
+    height: max-content;
+}
+
+
+#popup #login-nav {
+    grid-column: span 2;
+    border-bottom: 1px solid black;
+
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0px 0px 10px gray;
+
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+
+    top: 15%;
+
+    margin: 0 auto; /* Centers the .nav class horizontally */
+}
+
+#popup #login-nav button{
+    border: none;
+
+    margin: 5px;
+    background-color: transparent;
+
+    height: min-content;
+    width: fit-content;
+}
+
+#popup #login-nav button:disabled {
+    color: lightgray;
+}

@@ -1,0 +1,17 @@
+[package]
+name = "src"
+version = "1.0.0"
+authors = []
+
+[addresses]
+src = "_"
+
+[dev-addresses]
+src = "0x123"
+
+[dependencies.AptosFramework]
+git = "https://github.com/aptos-labs/aptos-framework.git"
+rev = "mainnet"
+subdir = "aptos-framework"
+
+[dev-dependencies]

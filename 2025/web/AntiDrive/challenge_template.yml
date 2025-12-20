@@ -1,0 +1,19 @@
+name: AntiDrive
+authors:
+  - Mx05
+
+description: |
+  Go0o0gle?!?!?! No! FUCK U MICROSOFT! I can do more, I want a relational drive. My drive is just BETTER! Why is it better?? Because of relations! I LOVE RELATIONS!!
+  I want a relation with one of this opensource drives user, he is beautiful and his name is **fotomodello**.
+  SO!!! Please! Help me find fotomodello's file so I can cherish my beautiful LOVE!!!!!!!
+  (I think that the file is flag.txt)
+
+  [Vai al sito](http://{{ host }}:{{ port }})
+
+topics:
+  - web
+
+files: []
+
+flags:
+  - unipi{r3l4t10n5_1nj3ct1ng_p41n5}

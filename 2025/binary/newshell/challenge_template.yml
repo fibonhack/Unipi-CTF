@@ -1,0 +1,13 @@
+name: "newshell"
+author: "markcc"
+
+description: What a strange shell is that?
+port: 10025
+host: 'challs.{{ CTFD_URL }}'
+connection_info: 'nc {{ host }} {{ port }}'
+
+topics:
+- pwn
+
+files:
+- dist/newshell

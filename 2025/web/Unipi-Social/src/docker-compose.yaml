@@ -1,0 +1,11 @@
+services:
+  unipi-social:
+    container_name: "unipi-social"
+    build:
+      context: .
+    ports:
+      - "9000:3000" 
+    restart: unless-stopped
+    read_only: true
+    environment:
+      - FLAG=unipi{j4v4scr1pt_c00ki3_inj3cti0n}

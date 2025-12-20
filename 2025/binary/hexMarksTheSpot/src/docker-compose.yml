@@ -1,0 +1,8 @@
+services:
+  hex-marks-the-spot:
+    container_name: hex_marks_the_spot
+    build:
+      context: .
+    ports:
+    - '10011:5000/tcp'
+    privileged: true

@@ -1,0 +1,9 @@
+name: CRYPTOcurrency
+author: goten
+
+description: A module exposes N, e1, e2 and ciphertexts c1, c2 of a hidden message. Recover the original message to solve.
+topics:
+- web3
+
+flags:
+  - unipi{JBZ_g035_f0r_th3_w3b3}

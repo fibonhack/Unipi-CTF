@@ -1,0 +1,18 @@
+name: hexMarksTheSpot
+author: Albran
+
+
+description: Yo-ho, yo-ho, a pirate life for me, the treasure is somewhere in the stack but can you find it? Remember (He)X Marks the spot 
+port: 10000
+# host: '{{ CTFD_URL }}'
+# connection_info: 'nc {{ host }} {{ port }}'
+
+topics:
+- pwn
+
+files:
+- hexMarksTheSpot.zip
+
+
+flags:
+  - unipi{y0u_f0und_th3_tr34sur3_4lw4ys_l00k_f0r_th3_X!}

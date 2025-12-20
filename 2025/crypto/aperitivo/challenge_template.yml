@@ -1,0 +1,24 @@
+name: Aperitivi Eterni Studenti
+author: sofia
+
+
+description: |
+  Gli studenti del corso di Sicurezza hanno deciso di implementare una loro versione di AES:
+  Aperitivi Eterni Studenti™  perché c’è sempre tempo per un altro giro (e per un nuovo commit).
+
+  Hanno lasciato il binario e alcuni file generati dal programma.
+  Dentro c’è una flag... ma non è così immediato ottenerla.
+# port: 10000
+# host: '{{ CTFD_URL }}'
+# connection_info: 'nc {{ host }} {{ port }}'
+# healthcheck: 'healthcheck.py REMOTE'
+
+topics:
+- crypto
+- rev
+
+files:
+- attachments/Aperritivi_Eterni_Studenti.zip
+
+flags:
+  - 

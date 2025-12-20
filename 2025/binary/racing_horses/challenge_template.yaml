@@ -1,0 +1,20 @@
+name: racing_horses
+author: Albran - Feld
+
+
+description: We cannot afford real horses, so we made a racing game with some virtual ones. If you bet on the right horse, you might win big! To make it easiear for you, your horse will always have a small head-start. Can you find out which one?  
+port: 5000
+# host: '{{ CTFD_URL }}'
+# connection_info: 'nc {{ host }} {{ port }}'
+
+topics:
+- pwn
+
+files:
+- racing_horse
+- racing_horse.c
+
+
+flags:
+  - unipi{41w4y5_l00k0u7_f0r_th3_b4ckw4rd_runn1ng_h0r53}
+

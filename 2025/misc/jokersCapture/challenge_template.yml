@@ -1,0 +1,18 @@
+name: Joker's Capture
+author: marcop
+
+
+description: The CCTV of Gotham City International Bank have spotted the Joker plugging a weird device into one of the computers and then doing some suspicious stuff. We don't know what that device was and the police was too late to capture him, but luckily we managed to capture the USB traffic exchanged between the device and the pc. Can you help Batman find the Joker's flag?
+# port: 10000
+# host: '{{ CTFD_URL }}'
+# connection_info: 'nc {{ host }} {{ port }}'
+# healthcheck: 'healthcheck.py REMOTE'
+
+topics:
+- misc
+
+files:
+- jokersCapture.zip
+
+flags:
+  - unipi{h3_turn5_t0_m3_4nd_h3_s4ys_why_s0_s3r14l?}

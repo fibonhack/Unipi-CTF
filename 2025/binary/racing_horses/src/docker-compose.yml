@@ -1,0 +1,10 @@
+version: '3.4'
+
+services:
+  racing_horse:
+    container_name: racing_horse
+    build:
+      context: .
+    ports:
+    - "10012:5000/tcp"
+    privileged: true

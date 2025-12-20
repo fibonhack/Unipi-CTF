@@ -1,0 +1,10 @@
+version: '3.4'
+
+services:
+  pwn_shell:
+    container_name: pwn_shell
+    build:
+      context: .
+    ports:
+    - "10015:5000/tcp"
+    privileged: true

@@ -1,0 +1,7 @@
+services:
+  please:
+    container_name: please
+    build: .
+    ports:
+      - 11000:5000
+    privileged: true

@@ -1,0 +1,12 @@
+services:
+  unipi-social-2:
+    container_name: "unipi-social-2"
+    build:
+      context: .
+    ports:
+      - "9020:3000" 
+    restart: unless-stopped
+    read_only: true
+    environment:
+      - FLAG=unipi{y37_4n07h3r_un54f3_p4r53r_15n7_17?}
+      - secret=some_random_secret_i_forgot_to_change_during_competition

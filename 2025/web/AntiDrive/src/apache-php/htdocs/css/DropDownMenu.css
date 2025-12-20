@@ -1,0 +1,17 @@
+#drop-down-menu{
+    position: fixed;
+    display: grid;
+
+    width: fit-content;
+    height: min-content;
+
+    background-color: white;
+    border: 1px solid #c7c7c7;
+    border-radius: 5px;
+
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1), 0px 1px 3px rgba(0, 0, 0, 0.06);
+}
+
+#drop-down-menu > * {
+    margin: 3px;
+}

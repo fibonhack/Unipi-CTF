@@ -1,0 +1,78 @@
+/*
+    TODO: fare un animazione per il popup
+*/
+
+/*
+    FIXME: studiare che diavolo sia :root e le cose con i due punti
+*/
+:root {
+    --grid-gap: 10px;
+}
+
+#popup {
+
+    z-index: 0;
+
+    border-radius: var(--window-radius);
+    background-color: #ffffffbf;
+    backdrop-filter: blur(5px);
+    
+    width: 100vw;
+    height: 100vh;
+
+    top: 0px;
+    left:0px;
+
+    position:fixed;
+    /* box-shadow: 0px 0px 15px var(--main-foreground); */
+}
+
+#popup > *:not(.manual-width):not(iframe) {
+    width: fit-content;
+}
+#popup > * {
+    backdrop-filter: blur(0px);
+    background-color: white;
+    
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position:relative;
+
+    z-index: 3;
+}
+
+#popup form{
+    display: grid;
+
+    width: 382px;
+    height: 142px;
+
+    grid-template-columns: auto auto;
+    grid-gap: var(--grid-gap);
+
+    padding: 50px;
+    box-shadow: 0px 0px 10px gray;
+    border-radius: 10px;
+}
+
+#popup form input {
+    height: min-content;
+}
+
+#popup form input:invalid{
+    border: 1px solid red;
+    border-radius: 2px;
+}
+
+#popup #logs{
+    color: red;
+    position: relative;
+    
+    bottom: 0px;
+}
+
+#popup button{
+    width: min-content;
+    height: min-content;
+}

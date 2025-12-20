@@ -1,0 +1,17 @@
+name: Unipi-Social-2
+title: Unipi-Social-2
+author: Waaaaaanm, drw0if
+  
+description: |
+  Abbiamo fixato una vulnerabilità molto importante della versione precedente. Ora hai anche il codice sorgente!
+
+  [Vai al sito](http://{{ host }}:{{ port }})
+
+topics:
+  - web
+
+files:
+  - attachments/chall.zip
+
+flags:
+  - unipi{y37_4n07h3r_un54f3_p4r53r_15n7_17?}
